@@ -1,0 +1,100 @@
+[info]
+    author = "HAYATO Kobara"
+    E-mail = "kobara.hayato.w6@s.mail.nagoya-u.ac.jp"
+    version = 1.1
+    modified_date = "2026-08-07"
+    unit = "SI, m, A, T"
+
+[drawing]
+    [drawing.coils.gen]
+        width = 0.06
+        height = 0.08
+        color = "blue"
+
+    [drawing.coils.test]
+        width = 0.04
+        height = 0.04
+        color = "firebrick"
+
+[coils]
+    [coils.gen]
+        [coils.gen.coil1]
+            type = "ring" # ring or line
+            radius = 0.15
+            current = 20000 # 100 * 200
+            position = [0.0, 0.0, -0.4]
+            rotation = [0.0, 0.0, 0.0]
+            turns = 100 # 8 turns, 18 layers
+
+        [coils.gen.coil2]
+            type = "ring" # ring or line
+            radius = 0.15
+            current = 20000 # 100 * 200
+            position = [0.0, 0.0, -0.3]
+            rotation = [0.0, 0.0, 0.0]
+            turns = 100 # 8 turns, 18 layers
+        [coils.gen.coil3]
+            type = "ring" # ring or line
+            radius = 0.15
+            current = 20000 # 100 * 200
+            position = [0.0, 0.0, -0.2]
+            rotation = [0.0, 0.0, 0.0]
+            turns = 100 # 8 turns, 18 layers
+        [coils.gen.coil4]
+            type = "ring" # ring or line
+            radius = 0.15
+            current = 20000 # 100 * 200
+            position = [0.0, 0.0, -0.1]
+            rotation = [0.0, 0.0, 0.0]
+            turns = 100 # 8 turns, 18 layers
+
+    [coils.test]
+        [coils.test.coil1]
+            type = "ring" # ring or line
+            radius = 0.20
+            current = 4800 # 150 * 32
+            position = [0.0, 0.0, 0]
+            rotation = [0.0, 0.0, 0.0]
+            turns = 32
+
+        [coils.test.coil2]
+            type = "ring" # ring or line
+            radius = 0.20
+            current = 4800 # 150 * 32
+            # current = 38400 # 24turns, 0.3T
+            position = [0.0, 0.0, 0.2]
+            rotation = [0.0, 0.0, 0.0]
+            turns = 32
+
+        [coils.test.coil3]
+            type = "ring" # ring or line
+            radius = 0.20
+            current = 4800 # 150 * 32
+            # current = 38400 # 24turns, 0.3T
+            position = [0.0, 0.0, 0.4]
+            rotation = [0.0, 0.0, 0.0]
+            turns = 32
+        [coils.test.coil4]
+            type = "ring" # ring or line
+            radius = 0.20
+            current = 4800 # 150 * 32
+            # current = 38400 # 24turns, 0.3T
+            position = [0.0, 0.0, 0.6]
+            rotation = [0.0, 0.0, 0.0]
+            turns = 32
+        [coils.test.coil5]
+            type = "ring" # ring or line
+            radius = 0.20
+            current = 4800 # 150 * 32
+            # current = 38400 # 24turns, 0.3T
+            position = [0.0, 0.0, 0.8]
+            rotation = [0.0, 0.0, 0.0]
+            turns = 32
+        # [coils.test.coil6]
+        #     type = "ring" # ring or line
+        #     radius = 0.20
+        #     current = 6400 # 200 * 32
+        #     # current = 38400 # 24turns, 0.3T
+        #     position = [0.0, 0.0, 1.0]
+        #     rotation = [0.0, 0.0, 0.0]
+        #     turns = 32

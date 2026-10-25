@@ -1,0 +1,167 @@
+[info]
+    author = "Yuichi KAWACHI"
+    E-mail = "y-kawachi@energy.nagoya-u.ac.jp"
+    version = 1.0
+    modified_date = "2024-12-5"
+    unit = "SI, m, A, T"
+    magnetic_axis = 0.18
+    #=================================
+    [info.Vaccum]
+        R = 0.18
+        Z = 0
+        height = 0.6
+        width = 0.228
+
+    [info.UDIV]
+        R = 0.18
+        Z = 0.18
+        height = 0.002
+        width = 0.2
+        
+    [info.LDIV]
+        R = 0.18
+        Z = -0.18
+        height = 0.002
+        width = 0.2
+    
+    
+    #=================================
+
+    [info.IC]
+        R = 0.18
+        Z = 0
+        height = 0.0336
+        width = 0.0348
+        radius = 0.0312
+    [info.UI]
+        R = 0.12
+        Z = 0.22
+        height = 0.0378
+        width = 0.0284
+    [info.UO]
+        R = 0.24
+        Z = 0.22
+        height = 0.0378
+        width = 0.0284
+    [info.LI]
+        R = 0.12
+        Z = -0.22
+        height = 0.0378
+        width = 0.0284
+    [info.LO]
+        R = 0.24
+        Z = -0.22
+        height = 0.0378
+        width = 0.0284
+    [info.UVF]
+        R = 0.43
+        Z = 0.17
+        height = 0.04 #要チェック
+        width = 0.04 #要チェック
+    [info.LVF]
+        R = 0.43
+        Z = -0.17
+        height = 0.04 #要チェック
+        width = 0.04 #要チェック
+
+
+
+
+# poloidal coils
+[IC]
+    type = "ring" # ring or line
+    radius = 0.18
+    current = 4e3 # current for single coil/ collection of coils
+    position = [0.0, 0.0, 0.0] #Z=0
+    rotation = [0.0, 0.0, 0.0]
+
+[UI]
+    type = "ring" # ring or line
+    radius = 0.12
+    current = 0
+    position = [0.0, 0.0, 0.22] #Z=0.22
+    rotation = [0.0, 0.0, 0.0]
+
+[UO]
+    type = "ring" # ring or line
+    radius = 0.24
+    current = 3e3
+    position = [0.0, 0.0, 0.22] #Z=0.22
+    rotation = [0.0, 0.0, 0.0]
+
+[LI]
+    type = "ring" # ring or line
+    radius = 0.12
+    current = 0
+    position = [0.0, 0.0, -0.22] #Z=-0.22
+    rotation = [0.0, 0.0, 0.0]
+
+[LO]
+    type = "ring" # ring or line
+    radius = 0.24
+    current = 3e3
+    position = [0.0, 0.0, -0.22] #Z=-0.22
+    rotation = [0.0, 0.0, 0.0]
+
+
+[UVF]
+    type = "ring" # ring or line
+    radius = 0.43
+    current = -4e3
+    position = [0.0, 0.0, 0.17] #Z=0.17
+    rotation = [0.0, 0.0, 0.0]
+
+[LVF]
+    type = "ring" # ring or line
+    # collections = false # true or false if true, the coil is a collection of coils
+    radius = 0.43
+    current = -4e3
+    position = [0.0, 0.0, -0.17] #Z=-0.17
+    rotation = [0.0, 0.0, 0.0]
+
+# toroidal coils
+[TF]
+    type = "line" # ring or line
+    current = 9.8e3 #1.4*7 = 9.8kA
+    vertices = [
+            # 0度
+            [0.0,0.0,-0.5],
+            [0.6,0.0,-0.5],
+            [0.6,0.0,0.5],
+            [0.0,0.0,0.5],
+            # 45度
+            [0.0,0.0,-0.5],
+            [0.424,0.424,-0.5],
+            [0.424,0.424,0.5],
+            [0.0,0.0,0.5],
+            # 90度
+            [0.0,0.0,-0.5],
+            [0.0,0.6,-0.5],
+            [0.0,0.6,0.5],
+            [0.0,0.0,0.5],
+            # 135度
+            [0.0,0.0,-0.5],
+            [-0.424,0.424,-0.5],
+            [-0.424,0.424,0.5],
+            [0.0,0.0,0.5],
+            # 180度
+            [0.0,0.0,-0.5],
+            [-0.6,0.0,-0.5],
+            [-0.6,0.0,0.5],
+            [0.0,0.0,0.5],
+            # 225度
+            [0.0,0.0,-0.5],
+            [-0.424,-0.424,-0.5],
+            [-0.424,-0.424,0.5],
+            [0.0,0.0,0.5],
+            # 270度
+            [0.0,0.0,-0.5],
+            [0.0,-0.6,-0.5],
+            [0.0,-0.6,0.5],
+            [0.0,0.0,0.5],
+            # 315度
+            [0.0,0.0,-0.5],
+            [0.424,-0.424,-0.5],
+            [0.424,-0.424,0.5],
+            [0.0,0.0,0.5],
+        ]

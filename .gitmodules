@@ -1,0 +1,3 @@
+[submodule "nafusion_utils"]
+	path = nafusion_utils
+	url = git@github.com:NagoyaFusionLab/nafusion_utils.git
